@@ -1,3 +1,3 @@
-export { default } from "./Toast"
-export * from "./types"
-export {useToast} from "./useToast"
+export { default } from './Toast';
+export * from './types';
+export { useToast } from './useToast';

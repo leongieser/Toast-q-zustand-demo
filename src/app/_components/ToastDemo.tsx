@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useToast, ToastVariant } from "@/components/toast";
-import Button from "@/components/button";
+import { useToast, ToastVariant } from '@/components/toast';
+import Button from '@/components/button';
 
 export const ToastDemo = () => {
   const { addToast, queuedToasts } = useToast();
@@ -10,16 +10,16 @@ export const ToastDemo = () => {
     let toastVariant: ToastVariant | undefined;
 
     switch (variant) {
-      case "positive":
+      case 'positive':
         toastVariant = ToastVariant.POSITIVE;
         break;
-      case "warning":
+      case 'warning':
         toastVariant = ToastVariant.WARNING;
         break;
-      case "error":
+      case 'error':
         toastVariant = ToastVariant.ERROR;
         break;
-      case "neutral":
+      case 'neutral':
         toastVariant = ToastVariant.NEUTRAL;
         break;
       default:
@@ -28,25 +28,25 @@ export const ToastDemo = () => {
 
     addToast({
       message: `${
-        variant ? variant.charAt(0).toUpperCase() + variant.slice(1) : "Default"
+        variant ? variant.charAt(0).toUpperCase() + variant.slice(1) : 'Default'
       } Message`,
       variant: toastVariant,
     });
   };
 
   return (
-    <section className="flex flex-col gap-6 items-center">
+    <section className="flex flex-col items-center gap-6">
       <div className="flex gap-5">
-        <Button color="positive" onClick={() => handleClick("positive")}>
+        <Button color="positive" onClick={() => handleClick('positive')}>
           Positive
         </Button>
-        <Button color="warning" onClick={() => handleClick("warning")}>
+        <Button color="warning" onClick={() => handleClick('warning')}>
           Warning
         </Button>
-        <Button color="error" onClick={() => handleClick("error")}>
+        <Button color="error" onClick={() => handleClick('error')}>
           Error
         </Button>
-        <Button color="neutral" onClick={() => handleClick("neutral")}>
+        <Button color="neutral" onClick={() => handleClick('neutral')}>
           Neutral
         </Button>
         <Button onClick={() => handleClick()}>Default</Button>
